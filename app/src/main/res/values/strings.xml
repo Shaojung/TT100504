@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TT100504</string>
+    <string-array name="fruits">
+        <item>蘋果</item>
+        <item>香蕉</item>
+        <item>鳳梨</item>
+        <item>芭樂</item>
+    </string-array>
+</resources>
