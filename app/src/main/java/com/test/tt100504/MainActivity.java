@@ -20,8 +20,11 @@ public class MainActivity extends AppCompatActivity {
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                TextView tv = (TextView) view;
-                tv2.setText(tv.getText().toString());
+                // TextView tv = (TextView) view;
+                // tv2.setText(tv.getText().toString() + ":" + position);
+                String[] f = getResources().getStringArray(R.array.fruits);
+                tv2.setText(f[position]);
+
             }
 
             @Override
