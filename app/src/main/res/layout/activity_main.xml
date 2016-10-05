@@ -24,4 +24,13 @@
         android:layout_marginTop="12dp"
         android:id="@+id/spinner"
         android:entries="@array/fruits" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/textView2" />
 </RelativeLayout>

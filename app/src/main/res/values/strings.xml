@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TT100504</string>
     <string-array name="fruits">
+        <item>請選擇...</item>
         <item>蘋果</item>
         <item>香蕉</item>
         <item>鳳梨</item>
