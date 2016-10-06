@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner sp, sp2;
     TextView tv2;
     ArrayList<String> cities;
+    EditText ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         sp = (Spinner) findViewById(R.id.spinner);
         sp2 = (Spinner) findViewById(R.id.spinner2);
         tv2 = (TextView) findViewById(R.id.textView2);
+        ed = (EditText) findViewById(R.id.editText);
         cities = new ArrayList();
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -48,5 +51,9 @@ public class MainActivity extends AppCompatActivity {
                                                 cities);
         sp2.setAdapter(adapter);
 
+    }
+    public void clickADD(View v)
+    {
+        cities.add(ed.getText().toString());
     }
 }
