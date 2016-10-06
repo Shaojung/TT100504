@@ -8,9 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     Spinner sp, sp2;
     TextView tv2;
+    ArrayList<String> cities;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         sp = (Spinner) findViewById(R.id.spinner);
         sp2 = (Spinner) findViewById(R.id.spinner2);
         tv2 = (TextView) findViewById(R.id.textView2);
-
+        cities = new ArrayList();
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -35,8 +38,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        cities.add("台北");
+        cities.add("台中");
+        cities.add("高雄");
+        cities.add("台南");
 
-        String cities[] = {"台北","台中","高雄","台南"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
                                                 android.R.layout.simple_list_item_1,
                                                 cities);
